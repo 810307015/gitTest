@@ -49,3 +49,11 @@
 * git commit -m ''
 * git push origin [branch]
 * 或者直接git pull origin master，然后再将改动进行提交。
+
+## 在分支上对上一次的提交进行修改
+
+* git add *
+* git commit --amend
+* git push [origin (branch)] -f
+
+
