@@ -56,7 +56,7 @@
 * git commit --amend
 * git push [origin (branch)] -f
 
-## git rebase [--abort][`master`][`i HEAD~3`]
+## git rebase [--abort][`master`][`-i HEAD~3`]
 
 * 在已经提交到公共仓库后就不能使用
 
