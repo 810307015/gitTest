@@ -23,3 +23,7 @@
 ## git diff
 
 * 查看本地与远程仓库的差异
+
+## git merge [branch]
+
+* 在master下合并分支的内容
