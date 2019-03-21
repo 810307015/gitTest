@@ -31,3 +31,21 @@
 ## git merge [branch]
 
 * 在master下合并分支的内容
+
+## 主干合并分支
+
+* 先进入分支更新至最新的仓库代码，git checkout [branch], git pull
+* 切换回主干, git checkout master
+* 再主干上合并分支branch，git merge branch --squash
+* 提交合并后的代码: git commit -m ''
+* 最后push到远程仓库
+* 或者直接git pull origin [branch]，然后再将改动进行提交。
+
+## 分支合并主干
+
+* 先在主干更新至最新, git pull(master)
+* git checkout [branch]
+* git merge master
+* git commit -m ''
+* git push origin [branch]
+* 或者直接git pull origin master，然后再将改动进行提交。
