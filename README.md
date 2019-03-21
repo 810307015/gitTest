@@ -24,6 +24,10 @@
 
 * 查看本地与远程仓库的差异
 
+## git pull
+
+* 将远程仓库更新到本地
+
 ## git merge [branch]
 
 * 在master下合并分支的内容
