@@ -56,4 +56,7 @@
 * git commit --amend
 * git push [origin (branch)] -f
 
+## 合并多个commit为一个完整commit
 
+* git rebase master/ git rebase abort
+* 
