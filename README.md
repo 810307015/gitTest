@@ -56,7 +56,11 @@
 * git commit --amend
 * git push [origin (branch)] -f
 
-## 合并多个commit为一个完整commit
+## git rebase [--abort][`master`][`i HEAD~3`]
+
+* 在已经提交到公共仓库后就不能使用
+
+### 合并多个commit为一个完整commit
 
 * git rebase master/ git rebase abort
-* 
+* git 
