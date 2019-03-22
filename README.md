@@ -58,7 +58,7 @@
 
 ## git rebase [--abort][`master`][`-i HEAD~3`]
 
-* 合并多条commit
+* 合并主干修改(分支上的多条commit)
 
 ```command
 pick：保留该commit（缩写:p）
