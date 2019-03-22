@@ -68,7 +68,7 @@
 * `--abort`会回到rebase操作之前的状态，之前的提交的不会丢弃。
 * `master`合并主干修改
 * `--continue`用于修复冲突，提示开发者，一步一步地有没有解决冲突，fix conflicts and then run "git rebase --continue"。
-* `-i HEAD~3`将分支上与HEAD版本相近的三条数据的提交合并。
+* `-i HEAD~3`将分支上与近三次的commit合并。
 * `--skip`强制继续`rebase`，将引起冲突的commits丢弃掉。
 
 ```command
@@ -84,3 +84,25 @@ drop：我要丢弃该commit（缩写:d）
 ## git reflog
 
 * 找回丢失的commit信息。
+
+## git branch
+
+* 查看当前本地的分支。
+* `git branch -D [branch]`删除本地的分支。
+* `git push origin :[branch]`删除远程仓库的分支。
+
+## git reset
+
+* 本地代码库回滚。
+* `git reset --hard commit-id` :回滚到commit-id，讲commit-id之后提交的commit都去除。
+* `git reset --hard HEAD~3`：将最近3次的提交回滚。
+
+### 远程代码回滚
+
+1. git checkout [branch]
+2. git pull
+3. git branch the_branch_backup //备份一下这个分支当前的情况
+4. git reset --hard the_commit_id //把the_branch本地回滚到the_commit_id
+5. git push origin :the_branch //删除远程 the_branch
+6. git push origin the_branch //用回滚后的本地分支重新建立远程分支
+7. git push origin :the_branch_backup //如果前面都成功了，删除这个备份分支
