@@ -111,6 +111,7 @@ drop：我要丢弃该commit（缩写:d）
 
 * 查看所有提交记录
 * `git log --pretty=oneline --abbrev-commit`查看版本号和提交记录。
+* `git log --graph`查看分支合并图。
 
 ## git tag
 
