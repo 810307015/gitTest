@@ -106,3 +106,8 @@ drop：我要丢弃该commit（缩写:d）
 5. git push origin :the_branch //删除远程 the_branch
 6. git push origin the_branch //用回滚后的本地分支重新建立远程分支
 7. git push origin :the_branch_backup //如果前面都成功了，删除这个备份分支
+
+## git log
+
+* 查看所有提交记录
+* `git log --pretty=oneline --abbrev-commit`查看版本号和提交记录。
