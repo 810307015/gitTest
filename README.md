@@ -27,6 +27,12 @@
 ## git pull
 
 * 将远程仓库更新到本地
+* git pull的默认行为是git fetch + git merge。
+* git pull --rebase 是git fetch + git rebase。
+
+## git fetch
+
+* 从远程获取最新版本到本地，不会自动合并分支。
 
 ## git merge [branch]
 
@@ -56,9 +62,14 @@
 * git commit --amend
 * git push [origin (branch)] -f
 
-## git rebase [--abort][`master`][`-i HEAD~3`]
+## git rebase [--abort][`master`][`-i HEAD~3`][--skip]
 
-* 合并主干修改(分支上的多条commit)
+* `git rebase`从新定义起点
+* `--abort`会回到rebase操作之前的状态，之前的提交的不会丢弃。
+* `master`合并主干修改
+* `--continue`用于修复冲突，提示开发者，一步一步地有没有解决冲突，fix conflicts and then run "git rebase --continue"。
+* `-i HEAD~3`将分支上与HEAD版本相近的三条数据的提交合并。
+* `--skip`强制继续`rebase`，将引起冲突的commits丢弃掉。
 
 ```command
 pick：保留该commit（缩写:p）
@@ -69,3 +80,7 @@ fixup：将该commit和前一个commit合并，但我不要保留该提交的注
 exec：执行shell命令（缩写:x）
 drop：我要丢弃该commit（缩写:d）
 ```
+
+## git reflog
+
+* 找回丢失的commit信息。
