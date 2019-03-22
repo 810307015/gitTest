@@ -111,3 +111,13 @@ drop：我要丢弃该commit（缩写:d）
 
 * 查看所有提交记录
 * `git log --pretty=oneline --abbrev-commit`查看版本号和提交记录。
+
+## git tag
+
+* 打标签。
+* `git tag -a V1.2 -m 'release 1.2'`创建了本地一个版本 V1.2 ,并且添加了附注信息 'release 1.2'。
+* `git show V1.2`显示附注信息。
+* `git push origin --tags`将tag信息提交到远程仓库。
+* `git tag -d V1.2`删除本地的指定tag。
+* `git push origin :refs/tags/V1.2`
+* `git fetch origin tag V1.2`获取远程的指定版本。
