@@ -122,3 +122,7 @@ drop：我要丢弃该commit（缩写:d）
 * `git tag -d V1.2`删除本地的指定tag。
 * `git push origin :refs/tags/V1.2`
 * `git fetch origin tag V1.2`获取远程的指定版本。
+
+## git cherry-pick [commit版本号]
+
+* 将某个commit操作合并到当前的分支下。
